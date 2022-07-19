@@ -1,6 +1,10 @@
 /* ====================
                         default CSS 
 ======================== */
+body {
+    background-color: #E6E6E6;
+}
+
 body,
 h1,
 h2,
@@ -9,9 +13,76 @@ h4,
 h5,
 h6 {
     font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 @font-face {
-    font-family: HelveticaNeue;
-    src: url(fonts/Helvetica\ Neue\ UltraLight.otf);
+    font-family: 'HelveticaNeue';
+    src: url(fonts/Helvetica\ Neue\ UltraLight.ttf);
+}
+
+.container {
+    width: 1296px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 13px;
+    box-shadow: 0 0px 4px 1px #808080b5;
+    padding-top: 2px;
+}
+
+/* ====================
+                        slider style Css
+======================== */
+
+.slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1060px;
+    height: 430px;
+    padding: 30px 25px;
+    margin: 50px auto 0px;
+    background-color: rgb(22, 22, 22);
+    border-radius: 20px;
+    align-items: center;
+}
+
+.slider-left-text {
+    margin-left: 70px;
+}
+
+.slider-left-text h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+.slider-left-text p {
+    font-size: 14px;
+    color: #ffffffd4;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 26px;
+}
+
+.slider-left-text a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #DD0000;
+    border-radius: 10px;
+    font-family: 'HelveticaNeue';
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.slider-left-text i {
+    font-weight: 600;
+}
+
+.slider-left-text a:hover {}
+
+
+.slider-right-img img {
+    width: 437px;
 }

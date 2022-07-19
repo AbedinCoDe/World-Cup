@@ -86,3 +86,80 @@ h6 {
 .slider-right-img img {
     width: 437px;
 }
+
+
+/* ====================
+                        Post CSS
+======================== */
+
+.post-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 1060px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.navigation-sec {
+    width: 260px;
+    background-color: rgb(22, 22, 22);
+    height: 224px;
+    border-radius: 10px;
+}
+
+.navigation-sec a {
+    display: block;
+    padding: 13px 24px;
+    color: #000;
+    text-decoration: none;
+    background-color: #E6E6E6;
+    border-radius: 10px;
+    margin-top: 178px;
+    width: 150px;
+    text-align: center;
+    margin: 18px auto;
+    font-weight: bold;
+}
+
+.navigation-post {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 12px;
+    row-gap: 25px;
+    grid-column-end: none;
+    margin-left: 48px;
+}
+
+.navigation-sec>.active {
+    background-color: #DD0000;
+    color: #E6E6E6;
+}
+
+.navigation-post>.post-1>.post-img img {
+    width: 100%;
+}
+
+.navigation-post>.post-1>.blog-button {
+    margin-top: 6px;
+}
+
+.navigation-post>.post-1>.blog-button a {
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 1px 8px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.navigation-post>.post-1>.post-text p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navigation-post>.post-1>.post-text span:nth-child(3) {
+    margin-right: 18px;
+}
+
+.navigation-post>.post-1>.post-text span i {
+    margin-right: 5px;
+}

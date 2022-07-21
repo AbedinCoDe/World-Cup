@@ -18,6 +18,8 @@
 .navigation-post2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 119px;
+    grid-row-gap: 48px;
 }
 
 .navigation-post2>.post-2>.post-text a {
@@ -49,8 +51,8 @@
 }
 
 .post-2 {
-    width: 370px;
-    height: 200px;
+    width: 100%;
+    height: auto;
     justify-content: center;
     align-items: center;
     display: grid;

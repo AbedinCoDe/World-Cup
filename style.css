@@ -18,7 +18,6 @@ body {
     margin: 0 auto;
 }
 
-
 /* ############### fonts details   ########################## */
 
 @font-face {
@@ -37,6 +36,49 @@ h6 {
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* ##########Tab Button CSS ############ */
+
+
+
+.tab-button {
+    margin-bottom: 30px;
+    visibility: hidden;
+}
+
+.tab-button a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: #DD0000;
+    border-radius: 10px;
+    font-family: 'HelveticaNeue';
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.tab-button a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #7747fa;
+    transition: .3s ease-in-out;
+    z-index: -1;
+}
+
+.tab-button a:hover::after {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
 /* ====================
                         slider style Css
 ======================== */
@@ -44,7 +86,6 @@ h6 {
 .slider {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    height: 100%;
     padding-top: 30px;
     border-radius: 20px;
     align-items: center;
@@ -113,8 +154,7 @@ h6 {
 }
 
 .slider-right-img img {
-    vertical-align: middle;
-    width: 451px;
+    width: 78%;
     display: grid;
 }
 
@@ -230,6 +270,8 @@ h6 {
     text-align: center;
     color: #ffebebe8;
     padding-bottom: 25px;
+    padding-bottom: 25px;
+
 }
 
 .footer-nav ul {
@@ -269,32 +311,161 @@ h6 {
 
 
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
+
+    .container {
+        width: 100%;
+    }
 
     .slider {
+        width: 100%;
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+        padding: 30px 30px 0;
+    }
+
+    .slider-left-text {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .slider-right-img img {
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .post-section {
+        grid-template-columns: 1fr;
+        width: 100%;
     }
 
     .navigation-sec {
-        grid-template-columns: repeat(1, 1fr);
-        background-color: none;
-        background-color: #fff0;
-        margin-left: 74px;
+        background-color: #16161600;
+        margin: 0 auto;
+    }
+
+    .post-1 {
+        margin: 0 auto;
+    }
+
+
+    .navigation-post {
+
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .footer-nav ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+
+    .display-none {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:769px) and (max-width:900px) {
+    .container {
+        width: 100%;
+    }
+
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider-left-text {
+        margin-left: 10%;
+        margin-bottom: 10%;
+        line-height: 290%;
+    }
+
+    .slider-right-img img {
+        width: 100%;
+    }
+
+    .btn-simple {
+        padding: 0px 62px;
+
+    }
+
+    .post-section {
+        grid-template-columns: 1fr;
+        padding-bottom: 100px;
+        padding-top: 50px;
+    }
+
+
+    .navigation-sec {
+        background-color: #16161600;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        height: 100%;
+        column-gap: 12px;
+    }
+
+    .post-1 {
+        margin: 0 auto;
     }
 
     .navigation-post {
-        width: 50%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab-button {
+        visibility: visible;
+    }
+
+    .footer-nav ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 12px;
-        row-gap: 25px;
-        margin-left: 48px;
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+
+    .footer-nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
     }
 
 
+}
 
-    .footer-nav {
-        grid-template-columns: repeat(1, 1fr);
+@media screen and (min-width:901px) {
+
+    .slider {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
+
+    .post-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 100px;
+        padding-top: 50px;
+        justify-items: center;
+    }
+
+
+    .navigation-sec {
+        background-color: #161616;
+        grid-template-columns: repeat(1fr);
+    }
+
+    .post-1 {}
+
+    #elipsis-style {
+        width: 500px;
+        overflow: hidden;
+        height: 50px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+
 
 }

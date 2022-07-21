@@ -10,6 +10,23 @@ body {
     background-color: #ffffff;
 }
 
+.container {
+    width: 1296px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+/* ############### fonts details   ########################## */
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url(fonts/Helvetica\ Neue\ UltraLight.ttf);
+}
+
+
 body,
 h1,
 h2,
@@ -20,16 +37,6 @@ h6 {
     font-family: 'Poppins', sans-serif;
 }
 
-@font-face {
-    font-family: 'HelveticaNeue';
-    src: url(fonts/Helvetica\ Neue\ UltraLight.ttf);
-}
-
-.container {
-    width: 1296px;
-    margin: 0 auto;
-}
-
 /* ====================
                         slider style Css
 ======================== */
@@ -38,17 +45,16 @@ h6 {
     display: grid;
     grid-template-columns: 2fr 1fr;
     height: 100%;
-    padding-right: 105px;
     padding-top: 30px;
     border-radius: 20px;
     align-items: center;
-    width: 79%;
     background-color: #161616;
     margin: 17px 14px auto;
+    justify-content: center;
 }
 
 .slider-left-text {
-    padding-left: 70px;
+    margin-left: 75px;
 }
 
 .slider-left-text h1 {
@@ -112,9 +118,13 @@ h6 {
     display: grid;
 }
 
+
+
 /* ====================
                         Post CSS
 ======================== */
+
+
 
 .post-section {
     display: grid;
@@ -133,6 +143,7 @@ h6 {
     height: 300px;
 }
 
+
 .navigation-sec a {
     display: block;
     padding: 10px 41px;
@@ -149,20 +160,16 @@ h6 {
 }
 
 .navigation-post {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 12px;
     row-gap: 25px;
-    margin-left: 48px;
 }
 
 .navigation-sec>.active {
     background-color: #DD0000;
     color: #E6E6E6;
 }
-
-
 
 .navigation-post>.post-1>.blog-button {
     margin-top: 6px;
@@ -212,35 +219,47 @@ h6 {
 
 .footer-bg {
     background-color: rgb(22, 22, 22);
+    width: 100%;
 }
 
 .footer-nav {
-    padding: 50px;
-    text-align: center;
-    background-color: rgb(22, 22, 22);
+    padding-top: 40px;
 }
 
 .footer-nav h1 {
-    color: white;
-    font-size: 30px;
-    margin-bottom: 30px;
+    text-align: center;
+    color: #ffebebe8;
+    padding-bottom: 25px;
 }
 
-.footer-bg>.footer-nav ul {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
 }
 
-.footer-bg>.footer-nav ul li {
+.footer-nav ul li {
     list-style: none;
 }
 
-.footer-bg>.footer-nav ul li a {
+.footer-nav ul li a {
     text-decoration: none;
     padding: 10px 20px;
-    color: #ffffffc7;
-    font-weight: 200;
-    font-size: 12px;
+    color: #b9aeae;
+}
+
+.social-icon {
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 30px;
+}
+
+.social-icon {
+    text-align: center;
+}
+
+.social-icon a {
+    color: #ffaeedd6;
+    padding: 0 21px;
 }
 
 
@@ -277,247 +296,5 @@ h6 {
     .footer-nav {
         grid-template-columns: repeat(1, 1fr);
     }
-}
 
-
-
-@media screen and (min-width:577px) and (max-width:900px) {
-
-
-    .post-section {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .navigation-sec {
-        grid-template-columns: repeat(3, 1fr);
-        background-color: none;
-        background-color: #fff0;
-        height: 100%;
-        margin-left: 74px;
-    }
-
-    .navigation-post {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .post-1>.post-img {}
-
-    .post-1>.post-img img {
-        width: 67%;
-    }
-
-}
-
-
-
-
-@media screen and (min-width:901px) {
-    .slider {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        height: 100%;
-        padding-right: 30px;
-        padding-top: 30px;
-        margin: 50px auto 0px;
-        border-radius: 20px;
-        align-items: center;
-        width: 100%;
-        background-color: #161616;
-    }
-
-    .slider-left-text {
-        padding-left: 70px;
-    }
-
-    .slider-left-text h1 {
-        font-size: 50px;
-        font-weight: 600;
-        color: white;
-    }
-
-    .slider-left-text p {
-        font-size: 14px;
-        color: #ffffffd4;
-        font-weight: 300;
-        line-height: 26px;
-        margin-bottom: 26px;
-    }
-
-    .btn-simple {
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        background-color: #DD0000;
-        border-radius: 10px;
-        font-family: 'HelveticaNeue';
-        font-weight: 700;
-        letter-spacing: 2px;
-        position: relative;
-        z-index: 1;
-        display: inline-block;
-    }
-
-    .btn-simple::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: #7747fa;
-        transition: .3s ease-in-out;
-        z-index: -1;
-    }
-
-    .btn-simple:hover::after {
-        width: 100%;
-        border-radius: 10px;
-    }
-
-    .slider-left-text i {
-        font-weight: 600;
-    }
-
-
-
-    .slider-right-img {
-        padding-right: 20px;
-    }
-
-    .slider-right-img img {
-        vertical-align: middle;
-        width: 451px;
-        display: grid;
-    }
-
-    /* ====================
-                            Post CSS
-    ======================== */
-
-    .post-section {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 auto;
-        padding-bottom: 100px;
-        padding-top: 100px;
-    }
-
-    .navigation-sec {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        background-color: rgb(22, 22, 22);
-        border-radius: 10px;
-        width: 300px;
-        height: 300px;
-    }
-
-    .navigation-sec a {
-        display: block;
-        padding: 10px 41px;
-        line-height: 44px;
-        color: rgb(0, 0, 0);
-        text-decoration: none;
-        background-color: rgb(230, 230, 230);
-        border-radius: 10px;
-        width: 150px;
-        font-size: 17px;
-        text-align: center;
-        margin: 18px auto;
-        font-weight: bold;
-    }
-
-    .navigation-post {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 12px;
-        row-gap: 25px;
-        margin-left: 48px;
-    }
-
-    .navigation-sec>.active {
-        background-color: #DD0000;
-        color: #E6E6E6;
-    }
-
-
-
-    .navigation-post>.post-1>.blog-button {
-        margin-top: 6px;
-    }
-
-    .navigation-post>.post-1>.blog-button a {
-        text-decoration: none;
-        margin-left: 10px;
-        padding: 1px 8px;
-        border: 1px solid gray;
-        border-radius: 5px;
-        transition: .3s ease;
-    }
-
-    .navigation-post>.post-1>.blog-button a:hover {
-        background-color: #161616;
-        color: #E6E6E6;
-    }
-
-    .navigation-post>.post-1>.post-text a {
-        display: block;
-        font-size: 14px;
-        font-weight: 500;
-        text-decoration: none;
-        margin-top: 15px;
-        color: #221010a6;
-        margin-bottom: 10px;
-        transition: .2s ease-out;
-    }
-
-    .navigation-post>.post-1>.post-text a:hover {
-        color: #DD0000;
-        letter-spacing: .5px;
-    }
-
-    .navigation-post>.post-1>.post-text span:nth-child(3) {
-        margin-right: 18px;
-    }
-
-    .navigation-post>.post-1>.post-text span i {
-        margin-right: 5px;
-    }
-
-    /* ====================
-                            footer style css
-    ======================== */
-
-    .footer-bg {
-        background-color: rgb(22, 22, 22);
-    }
-
-    .footer-nav {
-        padding: 50px;
-        text-align: center;
-        background-color: rgb(22, 22, 22);
-    }
-
-    .footer-nav h1 {
-        color: white;
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
-
-    .footer-bg>.footer-nav ul {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-    }
-
-    .footer-bg>.footer-nav ul li {
-        list-style: none;
-    }
-
-    .footer-bg>.footer-nav ul li a {
-        text-decoration: none;
-        padding: 10px 20px;
-        color: #ffffffc7;
-        font-weight: 200;
-        font-size: 12px;
-    }
 }

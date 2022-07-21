@@ -456,7 +456,9 @@ h6 {
         grid-template-columns: repeat(1fr);
     }
 
-    .post-1 {}
+    .navigation-post {
+        margin-right: 11px;
+    }
 
     #elipsis-style {
         width: 500px;
@@ -466,6 +468,8 @@ h6 {
         white-space: nowrap;
     }
 
-
+    .footer-nav {
+        grid-template-columns: repeat(6, 1fr);
+    }
 
 }
